@@ -1,12 +1,13 @@
-/* eslint-disable no-unused-vars */
 import React from "react";
+
 function Navbar() {
   const ScrollToMen = () => {
     const e = document.getElementById("mens");
     e.scrollIntoView({ behavior: "smooth", block: "start" });
   };
+
   return (
-    <div className="flex  flex-col sm:flex-row items-center justify-between p-6 bg-gradient-to-br from-teal-400 to-purple-600 rounded-lg shadow-2xl overflow-hidden">
+    <div className="flex flex-col sm:flex-row items-center justify-between p-6 bg-gradient-to-br from-teal-400 to-purple-600 rounded-lg shadow-2xl overflow-hidden">
       <div className="flex items-center space-x-3 mb-4 sm:mb-0">
         <div className="bg-white p-2 rounded-full shadow-lg">
           <img
@@ -44,6 +45,13 @@ function Navbar() {
         </li>
         <li className="text-white hover:underline hover:text-yellow-300 cursor-pointer transition duration-300">
           Contact Us
+        </li>
+        <li>
+          <img
+            className="w-5"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeDnv8PruFmHMhxGbjjJ2NUwzarQyxmta0Xw&s"
+            alt=""
+          />
         </li>
       </ul>
 

@@ -1,3 +1,4 @@
+import React from "react";
 import ImgeSlider from "./imgeSlider/ImgeSlider";
 import Navbar from "./Navbar/Navbar";
 import Delivery from "./Delivery";
@@ -36,13 +37,6 @@ function App() {
     },
     {
       imgSrc:
-        "https://essentia.com.pk/cdn/shop/products/FST1246-016-MBL_1.jpg?v=1669803912",
-      title: "Graphic Tee",
-      description: "A stylish graphic t-shirt for casual wear.",
-      price: "$30",
-    },
-    {
-      imgSrc:
         "https://outfitters.com.pk/cdn/shop/files/F1121106128_3.jpg?v=1725605419&width=533",
       title: "Cotton Crew Neck",
       description: "Soft cotton crew neck for all-day comfort.",
@@ -54,6 +48,13 @@ function App() {
       title: "Sports Tee",
       description: "A lightweight t-shirt perfect for workouts.",
       price: "$50",
+    },
+    {
+      imgSrc:
+        "https://essentia.com.pk/cdn/shop/products/FST1246-016-MBL_1.jpg?v=1669803912",
+      title: "Graphic Tee",
+      description: "A stylish graphic t-shirt for casual wear.",
+      price: "$30",
     },
     {
       imgSrc:
@@ -91,6 +92,7 @@ function App() {
       price: "$20",
     },
   ];
+
   const smartWatchesData = [
     {
       imgSrc:
@@ -117,19 +119,18 @@ function App() {
     },
     {
       imgSrc:
+        "https://en-pk.svestonwatches.com/cdn/shop/files/Nitro_Cam003V1.webp?v=1717227422&width=720g",
+      title: "Apple Watch Series 8",
+      description: "Smartwatch with advanced health features and GPS.",
+      price: "$399",
+    },
+    {
+      imgSrc:
         "https://cdn.shopify.com/s/files/1/0003/5815/4293/files/Torque_Cam002_V3.png?v=1720090509",
       title: "Garmin Forerunner 245",
       description:
         "Running smartwatch with GPS and advanced training features.",
       price: "$349",
-    },
-    {
-      imgSrc:
-        "https://cdn.shopify.com/s/files/1/0003/5815/4293/files/Legend_Cam002V2.webp?v=1719309018",
-      title: "Amazfit GTR 3",
-      description:
-        "Stylish smartwatch with long battery life and fitness tracking.",
-      price: "$199",
     },
     {
       imgSrc:
@@ -140,11 +141,10 @@ function App() {
     },
     {
       imgSrc:
-        "https://cdn.shopify.com/s/files/1/0003/5815/4293/files/Legend_Cam002V2.webp?v=1719309018",
-      title: "Amazfit GTR 3",
-      description:
-        "Stylish smartwatch with long battery life and fitness tracking.",
-      price: "$199",
+        "https://en-pk.svestonwatches.com/cdn/shop/files/Nitro_Cam003V1.webp?v=1717227422&width=720g",
+      title: "Apple Watch Series 8",
+      description: "Smartwatch with advanced health features and GPS.",
+      price: "$399",
     },
     {
       imgSrc:
@@ -156,13 +156,13 @@ function App() {
   ];
 
   return (
-    <>
+    <div className="bg-white text-black">
       <Navbar />
       <ImgeSlider />
       <Delivery />
       <Tshirts tShirts={tShirts} />
       <SmartWatches smartWatchesData={smartWatchesData} />
-    </>
+    </div>
   );
 }
 

@@ -30,26 +30,28 @@ const Delivery = () => {
 
   return (
     <div className="bg-gradient-to-r from-blue-100 to-blue-200 py-10">
-      <h2 className="text-4xl font-bold text-center mb-8 text-blue-700 drop-shadow-lg">
+      <h2 className="text-4xl font-bold text-center mb-8 bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-blue-500 drop-shadow-lg">
         Our Delivery Promise
       </h2>
-      <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-        {deliveryOptions.map(({ imgSrc, title, description }) => (
-          <div
-            key={title}
-            className="flex flex-col items-center p-8 bg-white rounded-lg shadow-xl transition-transform transform hover:scale-105 hover:shadow-2xl"
-          >
-            <img
-              className="w-20 h-20 mb-4 transition-transform transform hover:scale-125"
-              src={imgSrc}
-              alt={`${title} icon`}
-            />
-            <h3 className="font-semibold text-xl text-gray-800 mb-2">
-              {title}
-            </h3>
-            <p className="text-gray-600 text-center text-sm">{description}</p>
-          </div>
-        ))}
+      <div className="container mx-auto">
+        <div className="flex justify-between bg-white rounded-lg shadow-xl p-4">
+          {deliveryOptions.map(({ imgSrc, title, description }) => (
+            <div
+              key={title}
+              className="flex flex-col items-center flex-1 mx-2 transition-transform transform hover:scale-105 hover:shadow-2xl"
+            >
+              <img
+                className="w-16 h-16 mb-2 transition-transform hover:rotate-[360deg] filter grayscale hover:grayscale-0"
+                src={imgSrc}
+                alt={`${title} icon`}
+              />
+              <h3 className="font-semibold text-lg mb-1 bg-clip-text text-transparent bg-gradient-to-r from-red-500 to-yellow-500 via-green-500 to-blue-500">
+                {title}
+              </h3>
+              <p className="text-gray-600 text-center text-sm">{description}</p>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

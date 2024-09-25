@@ -37,7 +37,7 @@ const ImageSlider = () => {
     setTimeout(() => {
       goToNext();
     }, 20000);
-  }, [currentIndex, setCurrentIndex]);
+  }, [currentIndex]);
 
   return (
     <div className="relative w-full h-[400px] overflow-hidden rounded-xl shadow-2xl">
